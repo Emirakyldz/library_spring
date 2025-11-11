@@ -13,6 +13,10 @@ public class Shelf {
 
     @Override
     public String toString() {
-        return "Shelf: " + books;
+        StringBuilder sb = new StringBuilder();
+        for (Book book : books) {
+            sb.append("- ").append(book.toString()).append("\n");
+        }
+        return sb.toString().trim();
     }
 }
